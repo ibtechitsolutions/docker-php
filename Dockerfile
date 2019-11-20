@@ -16,7 +16,5 @@ RUN addgroup -g 10099 ibtech-www \
     && docker-php-ext-install zip \
     && rm -rf /var/cache/apk/*
 
-COPY /usr/local/etc/php/conf.d/
-
 COPY config/php.ini /usr/local/etc/php/php.ini
 COPY config/php-fpm.conf /usr/local/etc/php-fpm.conf
