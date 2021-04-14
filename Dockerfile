@@ -17,8 +17,10 @@ RUN set -ex; \
 	rm -rf /var/lib/apt/lists/*; \
 	apt-get clean; \
 	\
+	pecl install ssh2-1.1.2; \
+	docker-php-ext-enable ssh2
 	docker-php-ext-configure gd --with-png-dir=/usr --with-jpeg-dir=/usr; \
-	docker-php-ext-install pdo pdo_mysql mbstring tokenizer xml gd mysqli opcache soap sockets shmop zip ssh2
+	docker-php-ext-install pdo pdo_mysql mbstring tokenizer xml gd mysqli opcache soap sockets shmop zip
 
 COPY config/php.ini /usr/local/etc/php/php.ini
 COPY docker-entrypoint.sh /docker-entrypoint.sh
