@@ -7,8 +7,7 @@ RUN set -ex; \
 		git \
 		libjpeg-dev \
 		libpng12-dev \
-		libxml2-dev \
-		sysvsem \
+		libxml2-dev \		
 	; \
 	cd /root; \
 	apt-get autoremove -y; \
