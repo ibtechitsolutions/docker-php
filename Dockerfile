@@ -6,8 +6,8 @@ RUN set -ex; \
 	apt-get install -y \
 		git \
 		libjpeg-dev \
-		libpng12-dev \
-		libxml2-dev \		
+		libpng-dev \
+		libxml2-dev \	
 	; \
 	cd /root; \
 	apt-get autoremove -y; \
